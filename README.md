@@ -4,6 +4,8 @@ Repository for learning linux in general and CentOS/Amazon Linux specifics. This
  - How do I know how many cores my system has?
  - How do I install MySql?
  - How do I install Node.js?
+ - How do I install Git?
+ - How to allow specific user run command as sudo without password?
 
 ### How do I know how many cores my system has?
 
@@ -44,3 +46,11 @@ nvm install 0.10
 nvm use 0.10
 sudo visudo # add `dirname $(which node)` to secure_path so you're able to `sudo node` and `sudo npm`
 ```
+
+### How do I install Git?
+
+Simply run `sudo yum install -y git`
+
+### How to allow specific user run command as sudo without password?
+
+Log in as root then run `sudo visudo` and add the following line `joe ALL=(ALL) NOPASSWD: /full/path/to/command`, or if you want to restrict wich arguments this user may pass you can change that line to `joe ALL=(ALL) NOPASSWD: /full/path/to/command ARG1 ARG2`.
