@@ -3,6 +3,7 @@ Repository for learning linux in general and CentOS/Amazon Linux specifics. This
 
  - How do I know how many cores my system has?
  - How do I install MySql?
+ - How do I install Node.js?
 
 ### How do I know how many cores my system has?
 
@@ -34,3 +35,12 @@ FLUSH PRIVILEGES;
 
 This is a per database permission so don't forget to use wildcards or specify specific databases.
 
+### How do I install Node.js?
+
+```bash
+curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash
+source ~/.bashrc
+nvm install 0.10
+nvm use 0.10
+sudo visudo # add `dirname $(which node)` to secure_path so you're able to `sudo node` and `sudo npm`
+```
