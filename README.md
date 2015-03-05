@@ -15,7 +15,7 @@ sudo yum upgrade -y
 sudo yum install mysql -y
 sudo yum install mysql-server -y
 sudo /etc/init.d/mysqld start
-mysqladmin -u root password 'Senha'
+mysqladmin -u root password 'rootPassword'
 sudo chkconfig mysqld on
  
 # my.cnf should be located at; /etc/my.cnf
@@ -28,14 +28,9 @@ sudo chkconfig mysqld on
 You will be required to grant remote access to any user you would like to be able to connect from outside localhost.
 
 ```sql
-use mysql;
-select host, user from user;
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'rootPassword';
+FLUSH PRIVILEGES;
 ```
 
-Choose which users to update then run another query similar to this:
-
-```sql
-update user set host="%" where user="root" and host="localhost.localdomain";
-flush privileges;
-```
+This is a per database permission so don't forget to use wildcards or specify specific databases.
 
