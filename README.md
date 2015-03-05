@@ -1,4 +1,4 @@
-# centos
+# CentOS Recipes
 Repository for learning linux in general and CentOS/Amazon Linux specifics. This repository contains basically a whole bunch of small recipes :)
 
  - How do I know how many cores my system has?
