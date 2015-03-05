@@ -6,6 +6,7 @@ Repository for learning linux in general and CentOS specifics. This repository c
  - How do I install Node.js?
  - How do I install Git?
  - How to allow specific user run command as sudo without password?
+ - How do I install nginx?
 
 ### How do I know how many cores my system has?
 
@@ -54,3 +55,14 @@ Simply run `sudo yum install -y git`
 ### How to allow specific user run command as sudo without password?
 
 Log in as root then run `sudo visudo` and add the following line `joe ALL=(ALL) NOPASSWD: /full/path/to/command`, or if you want to restrict wich arguments this user may pass you can change that line to `joe ALL=(ALL) NOPASSWD: /full/path/to/command ARG1 ARG2`.
+
+### How do I install nginx?
+
+To install nginx you must run these commands:
+
+```bash
+sudo yum install epel-release
+sudo yum install nginx
+```
+
+To start the services run `sudo /etc/init.d/nginx start`
