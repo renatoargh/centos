@@ -1,12 +1,17 @@
 # CentOS Recipes
 Repository for learning linux in general and CentOS specifics. This repository contains basically a whole bunch of small recipes :)
 
+ - How do I get OS version?
  - How do I know how many cores my system has?
  - How do I install MySql?
  - How do I install Node.js?
  - How do I install Git?
  - How to allow specific user run command as sudo without password?
  - How do I install nginx?
+
+### How do I get OS version?
+
+You should run `cat /etc/centos-release`
 
 ### How do I know how many cores my system has?
 
