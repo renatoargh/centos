@@ -1,6 +1,7 @@
 # CentOS Recipes
 Repository for learning linux in general and CentOS specifics. This repository contains basically a whole bunch of small recipes :)
 
+ - How do I install Poppler PDF Utilities?
  - How do I get OS version?
  - How do I know how many cores my system has?
  - How do I install MySql?
@@ -8,6 +9,14 @@ Repository for learning linux in general and CentOS specifics. This repository c
  - How do I install Git?
  - How to allow specific user run command as sudo without password?
  - How do I install nginx?
+
+### How do I install Poppler PDF Utilities?
+Just run `sudo yum install poppler-utils.x86_64`. This will allow you to use to following commands:
+```
+pdfdetach    pdffonts     pdfimages    pdfinfo      pdfroff      
+pdfseparate  pdftocairo   pdftohtml    pdftoppm     pdftops      
+pdftotext    pdfunite
+```
 
 ### How do I get OS version?
 
