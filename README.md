@@ -14,9 +14,18 @@ Repository for learning linux in general and CentOS specifics. This repository c
 
 ### How do I install PHP 5.4?
 
+**For Amazon Linux running on EC2**
+
 Run `sudo yum install httpd24 php54`. If you want to upgrade from a previous version first you should remove the packages listed in `sudo yum list installed | grep "php"`, then remove httpd `sudo yum remove httpd*` and finally run `sudo yum install httpd24 php54`.
 
 Source: http://superuser.com/questions/880522/how-to-yum-update-php-to-version-5-4-on-amazon-linux
+
+**For other distros**
+
+```shell
+yum install php
+yum install php-xml
+```
 
 ### How do I configure a static IP address?
 
