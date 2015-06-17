@@ -13,6 +13,7 @@ Repository for learning linux in general and CentOS specifics. This repository c
 
 ### How do I configure a static IP address?
 
+```plain
 ## Configure eth0
 #
 # vi /etc/sysconfig/network-scripts/ifcfg-eth0
@@ -52,6 +53,7 @@ GATEWAY=192.168.1.1
  
 nameserver 8.8.8.8      # Replace with your nameserver ip
 nameserver 192.168.1.1  # Replace with your nameserver ip
+```
 
 ### How do I install Poppler PDF Utilities?
 Just run `sudo yum install poppler-utils.x86_64`. This will allow you to use to following commands:
