@@ -17,7 +17,7 @@ Repository for learning linux in general and CentOS specifics. This repository c
 
 There are several ways, the one I am used to is by using cron:
 
-Log in with root account, run `crontab -e` and add a any commands procedded by `@reboot`, for example:
+Log in with root account, run `crontab -e` then add any commands procedded by `@reboot`, for example:
 
 ```shell
 @reboot echo "this is a test" > test.txt
