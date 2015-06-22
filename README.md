@@ -1,6 +1,7 @@
 # CentOS Recipes
 Repository for learning linux in general and CentOS specifics. This repository contains basically a whole bunch of small recipes :)
  
+ - How do I run scripts after reboot?
  - How do I install PHP 5.4?
  - How do I configure a static IP address?
  - How do I install Poppler PDF Utilities?
@@ -11,6 +12,22 @@ Repository for learning linux in general and CentOS specifics. This repository c
  - How do I install Git?
  - How to allow specific user run command as sudo without password?
  - How do I install nginx?
+
+### How do I run scripts after reboot?
+
+There are several ways, the one I am used to is by using cron:
+
+Log in with root account, run `crontab -e` and add a any commands procedded by `@reboot`, for example:
+
+```shell
+@reboot echo "this is a test" > test.txt
+```
+
+The previous example will output a string to a text file. Keep in mind that your script will execute as root, what might be undesirable in many situations (like starting up application servers). In this case you can always use the `su` like the following:
+
+```shell
+@reboot su - user -c "pm2 start index.js" > startup.log 2>&1
+```
 
 ### How do I install PHP 5.4?
 
