@@ -141,3 +141,12 @@ sudo yum install nginx
 ```
 
 To start the services run `sudo /etc/init.d/nginx start`
+
+If you happen to get errors after rebooting (e.g. `tail -f /var/log/nginx/error.log` shows something like `connect() to 127.0.0.1:7070 failed (13: Permission denied) while connecting to upstream`) you will have to follow [these steps](http://stackoverflow.com/a/24830777/91403): 
+
+```shell
+sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M mynginx
+sudo semodule -i mynginx.pp
+```
+
+If you don't have `audit2allow` and `semodule` binaries you will have to install them with `yum install policycoreutils-python`.
