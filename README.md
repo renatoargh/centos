@@ -1,6 +1,7 @@
 # CentOS Recipes
 Repository for learning linux in general and CentOS specifics. This repository contains basically a whole bunch of small recipes :)
  
+ - How do I know for how many hours my system is running?
  - How do I run scripts after reboot?
  - How do I install PHP 5.4?
  - How do I configure a static IP address?
@@ -12,6 +13,14 @@ Repository for learning linux in general and CentOS specifics. This repository c
  - How do I install Git?
  - How to allow specific user run command as sudo without password?
  - How do I install nginx?
+
+### How do I know for how long my system is running? 
+
+Besides running `uptime` you can run the below script if you need the result as a single number. Result is in hours.
+
+```bash
+echo "scale=2; `cat /proc/uptime | awk '{print $1}'` / 3600" | bc -l
+```
 
 ### How do I run scripts after reboot?
 
