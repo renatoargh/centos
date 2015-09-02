@@ -14,7 +14,7 @@ Repository for learning linux in general and CentOS specifics. This repository c
  - How to allow specific user run command as sudo without password?
  - How do I install nginx?
 
-### How do I know for how long my system is running? 
+### How do I know for how many hours my system is running? 
 
 Besides running `uptime` you can run the below script if you need the result as a single number. Result is in hours.
 
