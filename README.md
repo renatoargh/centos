@@ -133,7 +133,7 @@ sudo chkconfig mysqld on
 You will be required to grant remote access to any user you would like to be able to connect from outside localhost.
 
 ```sql
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'rootPassword';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'rootPassword' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
