@@ -130,8 +130,6 @@ sudo chkconfig mysqld on
 # sudo /etc/init.d/mysqld restart
 ```
 
-If you are looking for version 5.6 on Amazon Linux: http://www.tocker.ca/2013/10/30/installing-the-latest-mysql-5-6-on-amazon-linux-using-official-repos.html
-
 You will be required to grant remote access to any user you would like to be able to connect from outside localhost.
 
 ```sql
@@ -140,6 +138,8 @@ FLUSH PRIVILEGES;
 ```
 
 This is a per database permission so don't forget to use wildcards or specify specific databases.
+
+**If you are looking for version 5.6 on Amazon Linux:   http://www.tocker.ca/2013/10/30/installing-the-latest-mysql-5-6-on-amazon-linux-using-official-repos.html**
 
 ### How do I install Node.js?
 
