@@ -141,6 +141,10 @@ This is a per database permission so don't forget to use wildcards or specify sp
 
 **If you are looking for version 5.6 on Amazon Linux:   http://www.tocker.ca/2013/10/30/installing-the-latest-mysql-5-6-on-amazon-linux-using-official-repos.html**
 
+**MUST REMEMBER OF THE MYSQL CHARSET HEEL! MySQL by default sets everything to latin1 - so its better so change every defualt to utf8 upfront and prevent encoding problems in the future!:**
+- https://www.blueboxcloud.com/insight/blog-article/getting-out-of-mysql-character-set-hell
+- http://pieroxy.net/blog/2013/05/28/mysql_charset_hell.html
+
 ### How do I install Node.js?
 
 ```bash
